@@ -10,7 +10,7 @@ public class StudiKasus128 {
         System.out.print("Masukkan jumlah cup yang dipesan: ");
         int jumlahCup = sc.nextInt(); sc.nextLine();
         System.out.print("Masukkan uang yang dibayarkan: ");
-        int uangBayar = sc.nextInt(); sc.nextLine()
+        int uangBayar = sc.nextInt(); sc.nextLine();
         
         totalHarga = jumlahCup * hargaPerCup;
         diskon = 0;
