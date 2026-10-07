@@ -26,7 +26,26 @@ public class StudiKasus228 {
             } else {
                 System.out.println("Anda hanya peraih juara 1,2,3 yang dapat lolos pendanaan. Silakan periksa kembali peringkat Anda.");
             }
-        } 
+        } else if (jenisKegiatan.equalsIgnoreCase("PKM") || (jenisKegiatan.equalsIgnoreCase("lainnya"))) {
+            System.out.print("Masukkan jumlah dokumen yang diupload: ");
+            jmlDokumenYgDiupload = sc.nextInt(); sc.nextLine();
+
+            System.out.print("Masukkan status PKM (1 = lolos, 0 = tidak lolos): ");
+            statusPKM = sc.nextInt(); sc.nextLine();
+
+            System.out.print("Masukkan data lainnya: ");
+            int dataLainnya = sc.nextInt(); sc.nextLine();
+            if (statusPKM == 1||dataLainnya==1) {
+                if (jmlDokumenYgDiupload >= 4) {
+                    System.out.println("Selamat " + nama + " anda lolos pendanaan, dokumen prestasi Anda lengkap dan memenuhi syarat.");
+                } else {
+                    kurang = 4 - jmlDokumenYgDiupload;
+                    System.out.println("Maaf " + nama + ", dokumen prestasi Anda tidak lengkap atau tidak memenuhi syarat.");
+                }
+            } else {
+                System.out.println("Tim PKM tidak lolos pendanaan, silakan periksa kembali status PKM Anda.");
+            }
+        }
          else {
             System.out.println("Jenis kegiatan tidak valid. Silakan masukkan salah satu dari BELMAWA, BAKORMA, MANDIRI, PKM.");
         }
