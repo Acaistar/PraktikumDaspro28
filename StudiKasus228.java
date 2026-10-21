@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class StudiKasus228 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int jmlDokumenYgDiupload, peringkat, statusPKM, kurang;
+        int jmlDokumenYgDiupload, peringkat, statusPKM;
 
         System.out.println("---Validasi Kelengkapan dokumen Prestasi Mahasiswa Tahun Kegiatan 2026 Tahap 1---");
         System.out.print("Nama: ");
@@ -39,7 +39,7 @@ public class StudiKasus228 {
                 if (jmlDokumenYgDiupload >= 4) {
                     System.out.println("Selamat " + nama + " anda lolos pendanaan, dokumen prestasi Anda lengkap dan memenuhi syarat.");
                 } else {
-                    kurang = 4 - jmlDokumenYgDiupload;
+                    int kurang = 4 - jmlDokumenYgDiupload;
                     System.out.println("Maaf " + nama + ", dokumen prestasi Anda tidak lengkap atau tidak memenuhi syarat.");
                 }
             } else {
